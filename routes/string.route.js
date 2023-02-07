@@ -4,7 +4,7 @@ const auth = require('../middleware/auth.mid')
 
 const { updateHeaderString,getString } = require('../controllers/string.controller')
 
-router.get('/headerString',getString)
-router.patch('/headerString',auth, updateHeaderString)
+router.get('/api/headerString',getString)
+router.patch('/api/headerString',auth, updateHeaderString)
 
 module.exports = router

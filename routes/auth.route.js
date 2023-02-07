@@ -4,7 +4,7 @@ const auth = require('../middleware/auth.mid')
 
 const { login, createUser } = require('../controllers/auth.controller')
 
-router.post('/createUser',auth, createUser)
-router.post('/login', login)
+router.post('/api/createUser',auth, createUser)
+router.post('/api/login', login)
 
 module.exports = router

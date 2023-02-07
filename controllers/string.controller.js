@@ -19,7 +19,8 @@ const updateHeaderString = async (req,res)=>{
     if(!settings){
       tempHs = await GlobalSettings.create({headerString:headerString})
     }
-    res.status(200).json({msg:'sucessfully updated',tempHs})
+    let hs = tempHs.headerString
+    res.status(200).json({msg:'sucessfully updated',headerString:hs})
   } catch (e) {
     console.log(e.message)
     res.status(500).json({msg:'internal server error'})
